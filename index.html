@@ -4,38 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Utilisation de FullCalendar</title>
+    <title>CalendarMi</title>
 
     <!--Fichiers CSS-->
     <link rel="stylesheet" href="fullcalendar/core/main.css">
     <link rel="stylesheet" href="fullcalendar/daygrid/main.css">
     <link rel="stylesheet" href="fullcalendar/timegrid/main.css">
     <link rel="stylesheet" href="fullcalendar/list/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <div class="container">
-    <diiv class="row">
-        <div class="col-md-12">
-            <form action="app/adduser.php" method="POST" id="connexion">
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+    <div class="row">
+        <div  class="col-12 text-center m-2">
+            <a href="adduser.html"><button id="inscription" class="btn btn-dark">Inscription</button></a>
         </div>
-    </diiv>
+    </div>
 </div>
-
 <div id="calendrier"></div>
 <div id="confirmToDelete">
     <p>Voulez vous sup ?</p>
     <button id="delete">X</button>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center m-5">
+            <a href="./addevent.html"><button type="button" class="btn btn-dark">Ajouter un évènement</button></a>
+        </div>
+    </div>
 </div>
 <!--Fichiers JS-->
 <script src="https://code.jquery.com/jquery-3.5.1.js"

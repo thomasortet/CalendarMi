@@ -42,12 +42,20 @@ $(document).ready(function () {
                             let date = infos;
                             $('#confirmToDelete').fadeIn();
 
-                            $('#delete').click(function(e){
+                            $('#delete').click(function (e) {
                                 e.preventDefault();
                                 date.event.remove();
                                 $('#confirmToDelete').fadeOut();
                                 // AJAX ICI
-                            } );
+                                $.ajax({
+                                    url: '../app/delete.php',
+                                    type: 'POST',
+                                    data: del_id,
+                                    success: function (data) {
+
+                                    }
+                                })
+                            });
                         }
                     });
 
