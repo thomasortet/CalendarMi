@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>CalendarMi</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Utilisation de FullCalendar</title>
 
-        <!--Fichiers CSS-->
-        <link rel="stylesheet" href="fullcalendar/core/main.css">
-        <link rel="stylesheet" href="fullcalendar/daygrid/main.css">
-        <link rel="stylesheet" href="fullcalendar/timegrid/main.css">
-        <link rel="stylesheet" href="fullcalendar/list/main.css">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-        <div id="calendrier"></div>
-        <!--Fichiers JS-->
-        <script src="fullcalendar/core/main.js"></script>
-        <script src="fullcalendar/daygrid/main.js"></script>
-        <script src="fullcalendar/timegrid/main.js"></script>
-        <script src="fullcalendar/list/main.js"></script>
-        <script src="fullcalendar/interaction/main.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+    <!--Fichiers CSS-->
+    <link rel="stylesheet" href="fullcalendar/core/main.css">
+    <link rel="stylesheet" href="fullcalendar/daygrid/main.css">
+    <link rel="stylesheet" href="fullcalendar/timegrid/main.css">
+    <link rel="stylesheet" href="fullcalendar/list/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container">
+    <diiv class="row">
+        <div class="col-md-12">
+            <form action="app/adduser.php" method="POST" id="connexion">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </diiv>
+</div>
+
+<div id="calendrier"></div>
+<div id="confirmToDelete">
+    <p>Voulez vous sup ?</p>
+    <button id="delete">X</button>
+</div>
+<!--Fichiers JS-->
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+<script src="fullcalendar/core/main.js"></script>
+<script src="fullcalendar/daygrid/main.js"></script>
+<script src="fullcalendar/timegrid/main.js"></script>
+<script src="fullcalendar/list/main.js"></script>
+<script src="fullcalendar/interaction/main.js"></script>
+<script src="js/scripts.js"></script>
+</body>
 </html>
