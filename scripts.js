@@ -47,6 +47,14 @@ $(document).ready(function () {
                                 date.event.remove();
                                 $('#confirmToDelete').fadeOut();
                                 // AJAX ICI
+                                    $.ajax({
+                                        url: 'app/delete.php', // ATTENTION AU LIEN DANS VOS DOCUMENTS
+                                        type: 'POST',
+                                        data: 'id=' + infos.event.id,
+                                        dataType: 'json'
+
+                                    });
+
                             } );
                         }
                     });
@@ -58,8 +66,10 @@ $(document).ready(function () {
             }
         };
 
-        xmlhttp.open('get', 'http://fullcalendar.test/bdd.php', true);
-        xmlhttp.send(null);
+        xmlhttp.open('get', 'bdd.php', true)
+        xmlhttp.send(null)
 
     };
 });
+
+
